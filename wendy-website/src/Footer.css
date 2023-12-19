@@ -1,0 +1,32 @@
+.footer {
+    grid-area: footer;
+    padding: 5px;
+    text-align: center;
+    background-color: #173731;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer__list {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding-inline-start: 0;
+}
+
+.footer__link {
+    text-align: center;
+    margin: 0.5rem;
+    color: white;
+}
+
+@media (min-width: 44rem) {
+    .footer__list {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+}

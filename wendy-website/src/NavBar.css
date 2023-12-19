@@ -1,0 +1,94 @@
+.nav {
+    background-color: white;
+    height: auto;
+}
+
+.nav__list {
+    display: flex;
+    position: absolute;
+    right: 0;
+    flex-direction: column;
+
+    justify-content: flex-end;
+    align-items: center;
+
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+    background-color: white;
+}
+
+.nav__item {
+    position: relative;
+    list-style-type: none;
+
+}
+
+.nav__link {
+    display: inline-block;
+
+    padding: 0.5rem 1rem;
+
+    font-size: 1.3rem;
+    color: black;
+}
+
+.nav__link:hover {
+    background-color: #Ffbcf4;
+    color: #173731;
+}
+
+.nav__list--hidden {
+    display: none;
+}
+
+/* below CSS adapted from https://css.gg under the MIT License */
+/* @import url('https://unpkg.com/css.gg@2.0.0/icons/css/menu-boxed.css'); */
+.nav__toggle {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs, 1));
+    width: 18px;
+    height: 18px;
+    border-radius: 3px;
+    border: 2px solid;
+
+    margin-left: auto;
+    margin-right: 1rem;
+
+}
+
+.nav__toggle::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    background: currentColor;
+    border-radius: 3px;
+    top: 2px;
+    left: 2px;
+    box-shadow: 0 4px 0, 0 8px 0
+}
+
+
+@media (min-width: 44rem) {
+    .nav__list {
+        flex-direction: row;
+        position: relative;
+        justify-content: space-around;
+
+    }
+
+    .nav__toggle {
+        display: none;
+    }
+
+    .nav__list--hidden {
+        display: flex;
+    }
+
+}

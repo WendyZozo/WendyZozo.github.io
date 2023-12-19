@@ -1,0 +1,9 @@
+.app {
+  height: 100%;
+}
+
+.greeting__text {
+  margin: 1rem;
+  text-align: end;
+  color: #2F4858;
+}

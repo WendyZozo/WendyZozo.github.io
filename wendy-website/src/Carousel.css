@@ -1,0 +1,107 @@
+.carousel-container {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    background-color: white;
+}
+
+.carousel__heading {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 1rem auto;
+
+}
+
+.carousel__inner {
+    max-width: 600px;
+    display: flex;
+    margin: 0 auto;
+}
+
+
+.transform-0 {
+    transform: translateX(0%);
+}
+
+.transform-1 {
+    transform: translateX(-100%);
+}
+
+.transform-2 {
+    transform: translateX(-200%);
+}
+
+.transform-3 {
+    transform: translateX(-300%);
+}
+
+.transform-4 {
+    transform: translateX(-400%);
+}
+
+.carousel__item {
+    flex: 0 0 100%;
+}
+
+.carousel__image {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    transform-origin: center center;
+}
+
+.carousel__item:not(.active) {
+    transform: scale(0.8);
+}
+
+.carousel__button-prev,
+.carousel__button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+
+    color: #173731;
+    background-color: #FCF4F5;
+    border: 0.2rem solid #173731;
+    cursor: pointer;
+}
+
+.carousel__button-prev {
+    left: 1rem;
+}
+
+.carousel__button-next {
+    right: 1rem;
+}
+
+.carousel__indicators {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.indicator {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #ddd;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.active {
+    background-color: #173731;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+    .carousel__inner {
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel__item {
+        transition: transform 0.5s ease-in-out;
+    }
+}

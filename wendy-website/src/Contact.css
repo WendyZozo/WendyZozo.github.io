@@ -1,0 +1,298 @@
+.cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0.5rem;
+    margin: 0.5rem;
+}
+
+.card {
+    grid-column: span 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #173731;
+    border-radius: 0.5rem;
+    background-color: white;
+    padding: 1rem;
+    margin: 0.5rem;
+}
+
+.contact__icons-container {
+    margin: 2rem;
+    align-self: center;
+}
+
+.card__heading,
+.card__text,
+.contact__text {
+    text-align: center;
+}
+
+.contact__text {
+    margin: 3rem auto;
+}
+
+.contact__button {
+    text-align: center;
+    display: block;
+    margin: 1rem auto 2rem auto;
+    padding: 0.5rem 1rem;
+    border: 0.2rem solid #173731;
+    background-color: #173731;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.modal__contact {
+    width: 400px;
+    border: 3px solid #173731;
+    padding: 1rem;
+    text-align: left;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal__contact::backdrop {
+    background-color: black;
+    opacity: 0.7;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.7;
+}
+
+.contact__heading {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.contact__label {
+    display: inline-block;
+    text-align: left;
+    margin-bottom: 5px;
+    width: auto;
+}
+
+.contact__name,
+.contact__perferredname,
+.contact__email,
+.contact__confirm,
+.contact__select,
+.contact__message {
+    width: 100%;
+    border: 1px solid black;
+}
+
+.required-indicator,
+.required-text {
+    font-style: italic;
+    color: red;
+}
+
+.contact__name-error,
+.contact__email-error,
+.contact__confirm-error {
+    color: red;
+    font-style: italic;
+}
+
+.modal__buttons-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact__submit,
+.modal__cancel {
+    padding: 0.5rem 1rem;
+    border: 0.2rem solid #173731;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    margin: 1rem;
+}
+
+.contact__submit {
+    background-color: #173731;
+    color: white;
+}
+
+.modal__cancel {
+    background-color: #FCF4F5;
+    color: #173731;
+}
+
+/* below CSS adapted from https://css.gg under the MIT License */
+.gg-mail,
+.gg-mail::after {
+    display: block;
+    box-sizing: border-box;
+    height: 14px;
+    border: 2px solid;
+}
+
+.gg-mail {
+    overflow: hidden;
+    transform: scale(var(--ggs, 2));
+    position: relative;
+    width: 18px;
+    border-radius: 2px;
+}
+
+.gg-mail::after {
+    content: "";
+    position: absolute;
+    border-radius: 3px;
+    width: 14px;
+    transform: rotate(-45deg);
+    bottom: 3px;
+    left: 0;
+}
+
+.gg-user-add {
+    display: block;
+    transform: scale(var(--ggs, 2));
+    box-sizing: border-box;
+    width: 20px;
+    height: 18px;
+    background:
+        linear-gradient(to left, currentColor 8px, transparent 0) no-repeat 14px 6px/6px 2px,
+        linear-gradient(to left, currentColor 8px, transparent 0) no-repeat 16px 4px/2px 6px;
+}
+
+.gg-user-add::after,
+.gg-user-add::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    border: 2px solid;
+}
+
+.gg-user-add::before {
+    width: 8px;
+    height: 8px;
+    border-radius: 30px;
+    top: 0;
+    left: 2px;
+}
+
+.gg-user-add::after {
+    width: 12px;
+    height: 9px;
+    border-bottom: 0;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    top: 9px;
+}
+
+.gg-comment {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs, 2));
+    width: 20px;
+    height: 16px;
+    border: 2px solid;
+    border-bottom: 0;
+    box-shadow: -6px 8px 0 -6px, 6px 8px 0 -6px;
+}
+
+.gg-comment::after,
+.gg-comment::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 8px;
+}
+
+.gg-comment::before {
+    border: 2px solid;
+    border-top-color: transparent;
+    border-bottom-left-radius: 20px;
+    right: 4px;
+    bottom: -6px;
+    height: 6px;
+}
+
+.gg-comment::after {
+    height: 2px;
+    background: currentColor;
+    box-shadow: 0 4px 0 0;
+    left: 4px;
+    top: 4px;
+}
+
+
+@media (min-width: 44rem) {
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 0.5rem;
+    }
+
+    .card {
+        grid-column: span 4;
+        display: flex;
+        align-items: center;
+    }
+
+    .card__heading {
+        text-align: center;
+    }
+
+    .modal__contact {
+        width: 600px;
+
+    }
+
+    .contact {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+        align-items: start;
+    }
+
+    .contact__heading {
+        grid-column: span 2;
+        width: 100%;
+    }
+
+    .contact__label {
+        grid-column: 1 / 2;
+        display: inline-block;
+        align-items: center;
+    }
+
+    .contact__name,
+    .contact__perferredname,
+    .contact__email,
+    .contact__confirm,
+    .contact__select,
+    .contact__message {
+        grid-column: 2 / 3;
+        width: 100%;
+    }
+
+    .contact__name-error,
+    .contact__email-error,
+    .contact__confirm-error {
+        text-align: right;
+        grid-column: span 2;
+    }
+
+    .contact__checkbox-section,
+    .modal__buttons-container {
+        grid-column: span 2;
+    }
+}
