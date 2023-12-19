@@ -1,22 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './Projects.css';
-
 
 function Projects({ setPage }) {
     const [sortOption, setSortOption] = useState('nowToPast');
-
-    useEffect(() => {
-        setPage(document.location.pathname);
-
-        function onPopState() {
-            setPage(document.location.pathname);
-        }
-
-        window.addEventListener('popstate', onPopState);
-        return () => {
-            window.removeEventListener('popstate', onPopState);
-        };
-    }, [setPage]);
 
     const projectsData = [
         {
@@ -25,7 +11,7 @@ function Projects({ setPage }) {
             alt: "A laptop showing digital marketing data related to user acquisition",
             time: "2021/4",
             description: "Developed advertising strategy at Google Ads and Facebook platform, including creative innovation, detailed target, and Aha moment explore etc.",
-            destination: "Experiences"
+            destination: "https://ads.google.com/"
         },
         {
             title: "Huawei website UI & UX improvement",
@@ -113,7 +99,7 @@ function Projects({ setPage }) {
             alt: "Pixel digitals are shown in a screen",
             time: "2023/11",
             description: "Conduct training of the TensorFlow machine learning framework with datasets to enhance the accuracy of number recognition",
-            destination: "Experiences"
+            destination: "https://github.com/WendyZozo/INFO5100_002636593_JiaminChen/tree/main/Final_Project/number_recognizer"
         },
         {
             title: "NEU COE Hacker Club website development",
@@ -139,7 +125,7 @@ function Projects({ setPage }) {
             description: "Implemented back-end system for bank accounts management, including create account, deposit money, withdraw money and check balance etc. functions",
             destination: "https://github.com/WendyZozo/bank_account_system_backend"
         },
-    ];
+    ];    
 
     const sortProjects = () => {
         if (sortOption === 'nowToPast') {
@@ -171,11 +157,11 @@ function Projects({ setPage }) {
                     </select>
                 </label>
             </div>
-
+            
             <div className="cards">
                 {sortProjects().map((project, index) => (
                     <div className="card" key={index}>
-
+                        
                         <img src={project.image} alt={project.alt} className="card__image" />
                         <h3 className="card__heading">{project.title}</h3>
                         <p className="card__time">{project.time}</p>

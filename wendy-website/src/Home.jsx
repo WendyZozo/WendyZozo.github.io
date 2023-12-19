@@ -1,25 +1,11 @@
-import { useEffect, useState } from 'react';
 import Carousel from './Carousel';
 
 import './Home.css';
 
 function Home({ setPage }) {
-    useEffect(() => {
-        setPage(document.location.pathname);
-
-        function onPopState() {
-            setPage(document.location.pathname);
-        }
-
-        window.addEventListener('popstate', onPopState);
-        return () => {
-            window.removeEventListener('popstate', onPopState);
-        };
-    }, [setPage]);
 
     function go(event, page) {
         event.preventDefault();
-        window.history.pushState(null, '', page);
         setPage(page);
     }
 
@@ -33,10 +19,10 @@ function Home({ setPage }) {
                     <h2 className="intro__heading">Jiamin (Wendy) Chen</h2>
                     <p className="intro__text">Student @Northeastern University</p>
                     <p className="intro__text">ex Technical Product Manager @Xiaomi Inc.</p>
-                    <button className="intro__button-green" type="button" aria-label="See Wendy's resume" onClick={(e) => go(e, '/Experiences')}>
+                    <a href="/docs/wendy_chen_resume.pdf" className="intro__button-green">
                         SEE RESUME
-                    </button>
-                    <button className="intro__button-pink" type="button" aria-label="Contact Wendy" onClick={(e) => go(e, '/Contact')}>
+                    </a>
+                    <button className="intro__button-pink" type="button" aria-label="Contact Wendy" onClick={(e) => go(e, 'Contact Me')}>
                         CONTACT ME
                     </button>
                 </div>
@@ -50,13 +36,13 @@ function Home({ setPage }) {
                             alt="Work stationery" className="panel__image-left" />
                     </div>
                     <div className="panel__content">
+                        <p className="panel__text">Web Engineering Course Teaching Assistant at Northeastern University</p>
                         <p className="panel__text">fNIRS Data Machine Learning and Brain-Computer Interfaces Research Assistant at Northeastern University</p>
                         <p className="panel__text">Technical Product Manager at Xiaomi Inc. Internet Innovation Business Department </p>
                         <p className="panel__text">Technical Product Manager at Publicis Groupe, Sapient</p>
                         <button className="panel__button-green" type="button" aria-label="Learn more about Wendy's work experience"
-                            onClick={(e) => go(e, '/Experiences')}>LEARN MORE</button>
+                            onClick={(e) => go(e, 'Experiences')}>LEARN MORE</button>
                     </div>
-
                 </div>
 
                 <div className="panel">
@@ -70,7 +56,7 @@ function Home({ setPage }) {
                         <p className="panel__text">University of Queensland, Master of Commerce in Applied Finance & Professional Accounting (Double majors)</p>
                         <p className="panel__text">Beijing Normal University, Bachelor of Management in Business Administration</p>
                         <button className="panel__button-pink" type="button" aria-label="Learn more about Wendy's education background"
-                            onClick={(e) => go(e, '/Experiences')}>LEARN MORE</button>
+                            onClick={(e) => go(e, 'Experiences')}>LEARN MORE</button>
                     </div>
                 </div>
             </div>

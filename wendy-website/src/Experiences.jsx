@@ -77,7 +77,7 @@ const experiencesData = [
                 heading: 'Machine Learning Research Assistant @ Northeastern University',
                 content: (
                     <ul className="content__list">
-                        <li className="content__item">Time: Oct.2022 - Now</li>
+                        <li className="content__item">Time: Oct.2023 - Now</li>
                         <li className="content__item">Perform data cleaning and preprocessing using NumPy, including denoising, standardization, filtering, etc.</li>
                         <li className="content__item">Classify fNIRS data using machine learning algorithms SVM and k-NN, extracting frequency-domain and time-domain features to capture patterns related to attention concentration, and optimizing model performance</li>
                         <li className="content__item">Utilize deep learning CNN for spatiotemporal feature extraction, identifying local patterns and structures, and passing the extracted features to DNN layers for abstract feature classification</li>

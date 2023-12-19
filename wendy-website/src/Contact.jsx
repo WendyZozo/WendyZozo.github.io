@@ -128,7 +128,9 @@ function Contact({ onSubmit }) {
                         <div className="gg-mail"></div>
                     </div>
                     <h3 className="card__heading">Email</h3>
-                    <p className="card__text">chen.jiamin3@northeastern.edu</p>
+                    <p className="card__text">
+                        <a href="mailto:chen.jiamin3@northeastern.edu">chen.jiamin3@northeastern.edu</a>
+                    </p>
                 </div>
 
                 <div className="card">
@@ -136,7 +138,11 @@ function Contact({ onSubmit }) {
                         <div className="gg-user-add"></div>
                     </div>
                     <h3 className="card__heading">LinkedIn</h3>
-                    <p className="card__text">www.linkedin.com/in/jiamin-chen-wendy</p>
+                    <p className="card__text">
+                        <a href="https://www.linkedin.com/in/jiamin-chen-wendy" target="_blank" rel="noopener noreferrer">
+                            www.linkedin.com/in/jiamin-chen-wendy
+                        </a>
+                    </p>
                 </div>
 
                 <div className="card">
@@ -147,7 +153,7 @@ function Contact({ onSubmit }) {
                     <p className="card__text">WendyCHEN_6</p>
                 </div>
             </div>
-
+{/* 
             <p className="contact__text">or, leave me a message, I will get back to you as soon as possible.</p>
 
             <button className="contact__button" type="button" aria-label="Contact me by leaving me a message" onClick={openModal}>CONTACT ME</button>
@@ -299,7 +305,7 @@ function Contact({ onSubmit }) {
                         <button className="modal__cancel" type="button" aria-label="Close the form" onClick={closeModal}>Cancel</button>
                     </div>
                 </form>
-            </dialog>
+            </dialog> */}
         </>
     );
 }

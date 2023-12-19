@@ -12,44 +12,45 @@ import Footer from "./Footer";
 import './App.css';
 
 function App() {
-  // const [page, setPage] = useState('Home');
-  const [page, setPage] = useState('/');
+  const [page, setPage] = useState('Home');
+  // const [page, setPage] = useState('/');
 
-  useEffect(
-    () => {
-      setPage(document.location.pathname);
+  // useEffect(
+  //   () => {
+  //     setPage(document.location.pathname);
 
-      function onPopState() {
-        setPage(document.location.pathname);
-      }
+  //     function onPopState() {
+  //       setPage(document.location.pathname);
+  //     }
 
-      window.addEventListener('popstate', onPopState);
-      return () => {
-        window.removeEventListener('popstate', onPopState);
-      }
-    },
-  )
+  //     window.addEventListener('popstate', onPopState);
+  //     return () => {
+  //       window.removeEventListener('popstate', onPopState);
+  //     }
+  //   },
+  // )
   const [username, setUsername] = useState('');
 
   function onSubmit(username) {
     setUsername(username);
-  }
+  } 
 
   return (
     <>
       <Header setPage={setPage} />
-      <main className="main">
-        <NavBar setPage={setPage} />
+      <main className="main" id="main">
+        <NavBar setPage={setPage}/>
         {username && <p className="greeting__text"> Hello {username}!</p>}
-        {(page === '/' || page === '/Home') && <Home setPage={setPage} />}
-        {(page === '/Experiences') && <Experiences setPage={setPage} />}
-        {(page === '/Projects') && <Projects setPage={setPage} />}
-        {(page === '/Contact') && <Contact onSubmit={onSubmit} />}
-        {(page === '/Privacy') && <Privacy />}
+        {(page === 'Home') && <Home setPage={setPage} />}
+        {(page === 'Experiences') && <Experiences setPage={setPage}/>}
+        {(page === 'Projects') && <Projects setPage={setPage}/>}
+        {(page === 'Contact Me') && <Contact onSubmit={onSubmit}/>}
+        {(page === 'Privacy Policy') && <Privacy/>}
       </main>
-      <Footer setPage={setPage} />
+      <Footer setPage={setPage}/>
     </>
   );
 }
 
+  
 export default App;
