@@ -99,7 +99,7 @@ function Projects({ setPage }) {
             alt: "Pixel digitals are shown in a screen",
             time: "2023/11",
             description: "Conduct training of the TensorFlow machine learning framework with datasets to enhance the accuracy of number recognition",
-            destination: "https://github.com/WendyZozo/INFO5100_002636593_JiaminChen/tree/main/Final_Project/number_recognizer"
+            destination: "https://github.com/WendyZozo/number_recognizer_JAVAFX"
         },
         {
             title: "NEU COE Hacker Club website development",
